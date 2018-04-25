@@ -28,10 +28,9 @@ $(document).ready(function() {
 
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $('#showname').text(name);
-      $('.showingredient').text(`${body[0].name}`);
-      $('.showingredient').text(`The ingredients are ${body[0].ingredients[0].malt}.`);
-      $('.showfermentation').text(`Fermentation process is ${body[0].method.fermentation}`);
+      $('#showname').text(`${body[0].name}`);
+      $('.showingredient').text(`The ingredients are ${body[0].ingredients.malt[0].name}.`);
+      $('.showfermentation').text(`Fermentation process is ${body[0].method.fermentation.temp.value} degrees ${body[0].method.fermentation.temp.unit}`);
     }, function(error) {
       $('.showErrors').text(`There was an error processing your request: ${error.message}`);
     });
