@@ -8,21 +8,15 @@
 
     <h1>Punk API Beer</h1>
       <form id="beer">
-        <div class="form-group">
-          <label for="name-input">Name of Beer</label>
-          <input id ="name-input" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="ingredient-input">ingredients</label>
-          <input id ="ingredient-input" type="text" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="fermentation-input">fermentation</label>
-          <input id ="fermentation-input" type="text" class="form-control">
-        </div>
-        <button id="user-input">Get your custom beer!</button>
+        <p>What level alcohol content would you like?</p>
+        <select class="form-control" id="level">
+          <option value="3">Low</option>
+          <option value="6">High</option>
+        </select>
+        <button type="submit" class="btn btn-success">Get your custom beer!</button>
       </form>
-    <div id="showname"></div>
+      <div id="showName"></div>
+    <div id="showABV"></div>
     <div class="showingredient"></div>
     <div class="showfermentation"></div>
   </div>
